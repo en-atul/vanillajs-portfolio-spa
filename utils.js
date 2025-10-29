@@ -49,11 +49,7 @@ function routeToPage(path) {
       pageElement = document.createElement("fullstack-page");
       break;
     default:
-      if (route.startsWith("/product-")) {
-        pageElement = document.createElement("details-page");
-        const paramId = route.substring(route.lastIndexOf("-") + 1);
-        pageElement.dataset.productId = paramId;
-      }
+      pageElement = null;
   }
 
   render(pageElement);
