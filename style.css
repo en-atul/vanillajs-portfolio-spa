@@ -113,7 +113,6 @@ img {
 }
 
 header {
-  /* background: #fff; */
   color: var(--text);
   height: 60px;
   border-bottom: 1px solid #eee;
@@ -130,6 +129,7 @@ header > div:first-child {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  z-index: 999;
 }
 header ul {
   display: flex;
@@ -137,7 +137,7 @@ header ul {
   list-style: none;
 }
 header ul {
-  gap: 1rem;
+  gap: 1.5rem;
 }
 
 header a {
@@ -243,13 +243,13 @@ main > * {
 }
 
 footer {
-  /* background: #fff; */
   color: var(--muted);
   height: 56px;
   display: flex;
   justify-content: center;
   align-items: center;
   border-top: 1px solid #eee;
+  z-index: 999;
 }
 
 @media (min-width: 768px) {

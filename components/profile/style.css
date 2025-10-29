@@ -10,6 +10,10 @@ img{
   color: #111;
 }
 
+.profile-section {
+  margin-bottom: 2rem;
+}
+
 #profile__image{ 
   margin-bottom: 0.5rem;
 }
@@ -34,4 +38,98 @@ img{
   display: inline-flex;
   align-items: center;
   gap: 0.35rem;
+}
+
+/* Work Experience Styles */
+.experience-section {
+  margin-top: 2rem;
+}
+
+.section-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #111;
+  margin: 0 0 1.5rem 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.section-title::before {
+  content: '';
+  width: 4px;
+  height: 20px;
+  background: linear-gradient(135deg, #000000 0%, #764ba2 100%);
+  border-radius: 2px;
+}
+
+#work_experience {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.experience-card {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.experience-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  border-color: #d1d5db;
+}
+
+.experience-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 0.5rem;
+}
+
+.experience-company {
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: #111;
+}
+
+.experience-duration {
+  font-size: 0.875rem;
+  color: #6b7280;
+  background: #f3f4f6;
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+  font-weight: 500;
+}
+
+.experience-position {
+  font-weight: 600;
+  font-size: 1rem;
+  color: #374151;
+  margin-bottom: 0.75rem;
+}
+
+.experience-description {
+  color: #6b7280;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+}
+
+.experience-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tech-tag {
+  background: linear-gradient(135deg, #000000 0%, #443d46 100%);
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
 }

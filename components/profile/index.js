@@ -39,6 +39,29 @@ export default class ProfilePage extends HTMLElement {
       this.data.summary;
     const basedInEl = this.root.querySelector("#profile__based_in");
     basedInEl.innerHTML = '<i data-lucide="map-pin"></i> ' + this.data.based_in;
+
+    if (this.data.work_experience && this.data.work_experience.length > 0) {
+      const experienceContainer = this.root.querySelector("#work_experience");
+      if (experienceContainer) {
+        experienceContainer.innerHTML = '';
+        this.data.work_experience.forEach((exp, index) => {
+          const expCard = document.createElement("div");
+          expCard.className = "experience-card";
+          expCard.innerHTML = `
+            <div class="experience-header">
+              <div class="experience-company">${exp.company}</div>
+              <div class="experience-duration">${exp.duration}</div>
+            </div>
+            <div class="experience-position">${exp.position}</div>
+            <div class="experience-description">${exp.description}</div>
+            <div class="experience-tech">
+              ${exp.technologies.map(tech => `<span class="tech-tag">${tech}</span>`).join('')}
+            </div>
+          `;
+          experienceContainer.appendChild(expCard);
+        });
+      }
+    }
   }
 }
 customElements.define("profile-page", ProfilePage);

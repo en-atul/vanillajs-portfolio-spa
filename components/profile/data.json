@@ -13,7 +13,30 @@
         "frontend": ["React", "Vue", "TypeScript", "HTML", "CSS", "TailwindCSS"],
         "backend": ["Node.js", "Express", "Python", "Django", "PostgreSQL", "MongoDB"],
         "fullstack": ["Next.js", "NestJS", "GraphQL", "Docker", "AWS"]
-      }
+      },
+      "work_experience": [
+        {
+          "company": "TechCorp Inc.",
+          "position": "Senior Software Engineer",
+          "duration": "2022 - Present",
+          "description": "Leading development of microservices architecture and mentoring junior developers.",
+          "technologies": ["React", "Node.js", "AWS", "Docker", "Kubernetes"]
+        },
+        {
+          "company": "StartupXYZ",
+          "position": "Full Stack Developer",
+          "duration": "2020 - 2022",
+          "description": "Built scalable web applications from scratch and implemented CI/CD pipelines.",
+          "technologies": ["Vue.js", "Python", "PostgreSQL", "Redis"]
+        },
+        {
+          "company": "Digital Agency Co.",
+          "position": "Frontend Developer",
+          "duration": "2019 - 2020",
+          "description": "Developed responsive web applications and collaborated with design teams.",
+          "technologies": ["React", "TypeScript", "Sass", "Webpack"]
+        }
+      ]
     }
   }
   

@@ -1,6 +1,12 @@
-# SPA v1 — Vanilla JS Single-Page App
+# Vanilla JS Single-Page App
 
 An educational example showing how to build a Single‑Page Application (SPA) using only Vanilla JavaScript, Custom Elements (Web Components), and the History API for clean URLs.
+
+## Preview
+
+![Animated demo](assets/preview.gif)
+
+![Screenshot](assets/screenshot.webp)
 
 It demonstrates:
 
