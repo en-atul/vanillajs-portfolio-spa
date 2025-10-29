@@ -6,8 +6,10 @@
 #projects{
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
-  gap: 1.25rem;
+  gap: 1.5rem;
   align-items: stretch;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 #projects article{
@@ -19,6 +21,9 @@
   height: 100%;
   display: flex;
   flex-direction: column;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 1;
 }
 
 #projects article:hover{

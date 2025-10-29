@@ -13,6 +13,27 @@
       "technologies": ["Vue", "Vuex", "HTML", "CSS", "Sass"],
       "link": "https://shop.example.com",
       "github": "https://github.com/johndoe/ecommerce-frontend"
+    },
+    {
+      "title": "Task Management Dashboard",
+      "description": "Modern task management interface with drag-and-drop functionality and real-time updates.",
+      "technologies": ["React", "Redux", "Material-UI", "WebSocket"],
+      "link": "https://tasks.example.com",
+      "github": "https://github.com/johndoe/task-dashboard"
+    },
+    {
+      "title": "Weather Forecast App",
+      "description": "Beautiful weather application with animated backgrounds and detailed forecasts.",
+      "technologies": ["JavaScript", "HTML", "CSS", "OpenWeather API"],
+      "link": "https://weather.example.com",
+      "github": "https://github.com/johndoe/weather-app"
+    },
+    {
+      "title": "Music Player Interface",
+      "description": "Spotify-inspired music player with playlist management and audio visualization.",
+      "technologies": ["React", "TypeScript", "Styled Components", "Web Audio API"],
+      "link": "https://music.example.com",
+      "github": "https://github.com/johndoe/music-player"
     }
   ]
 }

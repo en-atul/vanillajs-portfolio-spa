@@ -20,6 +20,27 @@
       "technologies": ["React", "NestJS", "PostgreSQL", "GraphQL", "Docker"],
       "link": "https://projecttool.example.com",
       "github": "https://github.com/johndoe/project-management-tool"
+    },
+    {
+      "title": "E-learning Platform",
+      "description": "Complete learning management system with video streaming, quizzes, and progress tracking.",
+      "technologies": ["Next.js", "Node.js", "PostgreSQL", "Redis", "AWS S3", "Stripe"],
+      "link": "https://learn.example.com",
+      "github": "https://github.com/johndoe/elearning-platform"
+    },
+    {
+      "title": "Food Delivery App",
+      "description": "Full-featured food ordering platform with real-time order tracking and payment integration.",
+      "technologies": ["React", "Node.js", "MongoDB", "Socket.io", "Stripe", "Mapbox"],
+      "link": "https://fooddelivery.example.com",
+      "github": "https://github.com/johndoe/food-delivery-app"
+    },
+    {
+      "title": "Healthcare Management System",
+      "description": "HIPAA-compliant system for managing patient records, appointments, and prescriptions.",
+      "technologies": ["React", "TypeScript", "NestJS", "PostgreSQL", "Docker", "AWS"],
+      "link": "https://healthcare.example.com",
+      "github": "https://github.com/johndoe/healthcare-system"
     }
   ]
 }

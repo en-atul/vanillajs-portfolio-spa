@@ -15,6 +15,86 @@ body {
   flex-direction: column;
   color: var(--text);
   background-color: #fafafa;
+  position: relative;
+}
+
+/* Grid lines */
+.grid-line {
+  position: fixed;
+  z-index: 0;
+  pointer-events: none;
+  border: 1px dashed #e4e4e7;
+}
+
+/* Vertical lines */
+.grid-line-v1 {
+  top: 0;
+  left: 50%;
+  width: 1px;
+  height: 100vh;
+  transform: translateX(-50%);
+  border-left: 1px dashed #e4e4e7;
+  border-top: none;
+  border-right: none;
+  border-bottom: none;
+}
+
+.grid-line-v2 {
+  top: 0;
+  left: 50%;
+  width: 1px;
+  height: 100vh;
+  transform: translateX(-300px);
+  border-left: 1px dashed #e4e4e7;
+  border-top: none;
+  border-right: none;
+  border-bottom: none;
+}
+
+.grid-line-v3 {
+  top: 0;
+  left: 50%;
+  width: 1px;
+  height: 100vh;
+  transform: translateX(300px);
+  border-left: 1px dashed #e4e4e7;
+  border-top: none;
+  border-right: none;
+  border-bottom: none;
+}
+
+/* Horizontal lines */
+.grid-line-h2 {
+  top: 25vh;
+  left: 0;
+  width: 100vw;
+  height: 1px;
+  border-top: 1px dashed #e4e4e7;
+  border-left: none;
+  border-right: none;
+  border-bottom: none;
+}
+
+.grid-line-h3 {
+  top: 50vh;
+  left: 0;
+  width: 100vw;
+  height: 1px;
+  border-top: 1px dashed #e4e4e7;
+  border-left: none;
+  border-right: none;
+  border-bottom: none;
+}
+
+.grid-line-h4 {
+  top: 75vh;
+  left: 0;
+  width: 100vw;
+  height: 1px;
+  border-top: 1px dashed #e4e4e7;
+  border-left: none;
+  border-right: none;
+  border-bottom: none;
 }
 
 h1,
@@ -33,7 +113,7 @@ img {
 }
 
 header {
-  background: #fff;
+  /* background: #fff; */
   color: var(--text);
   height: 60px;
   border-bottom: 1px solid #eee;
@@ -79,11 +159,14 @@ main {
     flex: 1;              
     padding: 2rem 1rem;
     background-color: transparent; 
+    position: relative;
 }
 
 main > * {
   max-width: 1100px;
   margin: 0 auto;
+  position: relative;
+  z-index: 1;
 }
 
 #projects {
@@ -160,7 +243,7 @@ main > * {
 }
 
 footer {
-  background: #fff;
+  /* background: #fff; */
   color: var(--muted);
   height: 56px;
   display: flex;

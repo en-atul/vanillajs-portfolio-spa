@@ -11,6 +11,24 @@
       "description": "Backend for a multi-user blog platform with admin panel and content moderation.",
       "technologies": ["Python", "Django", "PostgreSQL", "Celery", "Redis"],
       "github": "https://github.com/johndoe/blog-backend"
+    },
+    {
+      "title": "Microservices Architecture",
+      "description": "Scalable microservices system with API gateway, service discovery, and message queue.",
+      "technologies": ["Node.js", "Docker", "Kubernetes", "RabbitMQ", "GraphQL"],
+      "github": "https://github.com/johndoe/microservices"
+    },
+    {
+      "title": "Payment Processing Service",
+      "description": "Secure payment gateway integration with Stripe and PayPal support.",
+      "technologies": ["Python", "FastAPI", "PostgreSQL", "Stripe API", "Docker"],
+      "github": "https://github.com/johndoe/payment-service"
+    },
+    {
+      "title": "Real-time Notification System",
+      "description": "Event-driven notification service with WebSocket support and email/SMS delivery.",
+      "technologies": ["Node.js", "Socket.io", "Redis", "MongoDB", "AWS SNS"],
+      "github": "https://github.com/johndoe/notification-system"
     }
   ]
 }
