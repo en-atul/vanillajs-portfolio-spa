@@ -15,13 +15,12 @@ export class FullstackPage extends HTMLElement {
     });
   }
 
-  // when the component is attached to the DOM
   async connectedCallback() {
-    const template = document.getElementById("frontend-page-template");
+    const template = document.getElementById("page-template");
     const content = template.content.cloneNode(true);
     this.root.appendChild(content);
 
-    // Load profile data
+    // Load data
     const res = await loadJSON("./components/fullstack/data.json");
     this.data = res;
 
@@ -31,22 +30,14 @@ export class FullstackPage extends HTMLElement {
   render() {
     if (!this.data) return;
 
-    this.root.querySelector("#menu").innerHTML = "";
-    for (let category of app.store.menu) {
-      const liCategory = document.createElement("li");
-      liCategory.innerHTML = `
-                    <h3>${category.name}</h3>
-                    <ul class='category'>                    
-                    </ul>
-                `;
-      this.root.querySelector("#menu").appendChild(liCategory);
-
-      category.products.forEach((product) => {
-        const item = document.createElement("product-item");
-        item.dataset.product = JSON.stringify(product);
-        liCategory.querySelector("ul").appendChild(item);
-      });
-    }
+    const projectContainer = this.root.querySelector("#projects");
+    projectContainer.innerHTML = "";
+    
+    this.data.projects.forEach((project) => {
+      const item = document.createElement("project-item");
+      item.dataset.project = JSON.stringify({ ...project, icon: "layers" });
+      projectContainer.appendChild(item);
+    });
   }
 }
 customElements.define("fullstack-page", FullstackPage);

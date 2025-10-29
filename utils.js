@@ -59,4 +59,20 @@ function routeToPage(path) {
   render(pageElement);
 }
 
-export { loadCSS, loadJSON, routeToPage };
+function lucideInit() {
+  setTimeout(() => {
+    if (window.lucide && typeof window.lucide.createIcons === "function") {
+      // Initialize icons in main document
+      window.lucide.createIcons();
+
+      // Initialize icons in all shadow DOMs
+      document.querySelectorAll("*").forEach((el) => {
+        if (el.shadowRoot) {
+          window.lucide.createIcons({ root: el.shadowRoot });
+        }
+      });
+    }
+  }, 100);
+}
+
+export { loadCSS, loadJSON, routeToPage, lucideInit };

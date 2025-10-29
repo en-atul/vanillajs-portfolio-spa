@@ -37,10 +37,8 @@ export default class ProfilePage extends HTMLElement {
     this.root.querySelector("#profile__name").textContent = this.data.name;
     this.root.querySelector("#profile__summary").textContent =
       this.data.summary;
-    this.root.querySelector("#profile__based_in").textContent =
-      this.data.based_in;
-    // this.root.querySelector('#profile__social_media').textContent = this.data.social_media;
-    // this.root.querySelector('#profile__stacks').textContent = this.data.stacks;
+    const basedInEl = this.root.querySelector("#profile__based_in");
+    basedInEl.innerHTML = '<i data-lucide="map-pin"></i> ' + this.data.based_in;
   }
 }
 customElements.define("profile-page", ProfilePage);
