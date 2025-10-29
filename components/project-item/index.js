@@ -11,7 +11,7 @@ export default class ProjectItem extends HTMLElement {
 
     const project = JSON.parse(this.dataset.project);
 
-    this.querySelector("h4.project__title").textContent = product.title;
+    this.querySelector("h4.project__title").textContent = project.title;
     this.querySelector("p.project__description").textContent =
       project.description;
     // this.querySelector("img").src = `data/images/${product.image}`;

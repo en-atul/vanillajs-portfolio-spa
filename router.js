@@ -57,7 +57,9 @@ class Router {
       this.#onRouteChange(path, state);
     }
   
-    // --- Internal hook (override or listen externally) ---
+    /**
+     * @description Internal route change listener hook
+     */
     #onRouteChange(path, state) {
       window.dispatchEvent(
         new CustomEvent('routechange', { detail: { path, state } })

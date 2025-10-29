@@ -20,4 +20,43 @@ async function loadCSS(path) {
   }
 }
 
-export { loadCSS, loadJSON };
+function render(pageElement) {
+  if (pageElement) {
+    const cache = document.querySelector("main");
+    cache.innerHTML = "";
+    cache.appendChild(pageElement);
+    window.scrollX = 0;
+    window.scrollY = 0;
+  } else {
+    document.querySelector("main").innerHTML = "404! Page Not Found";
+  }
+}
+
+function routeToPage(path) {
+  let pageElement = null;
+  switch (path) {
+    case "/":
+    case "/index.html":
+      pageElement = document.createElement("profile-page");
+      break;
+    case "/frontend":
+      pageElement = document.createElement("frontend-page");
+      break;
+    case "/backend":
+      pageElement = document.createElement("backend-page");
+      break;
+    case "/fullstack":
+      pageElement = document.createElement("fullstack-page");
+      break;
+    default:
+      if (route.startsWith("/product-")) {
+        pageElement = document.createElement("details-page");
+        const paramId = route.substring(route.lastIndexOf("-") + 1);
+        pageElement.dataset.productId = paramId;
+      }
+  }
+
+  render(pageElement);
+}
+
+export { loadCSS, loadJSON, routeToPage };
