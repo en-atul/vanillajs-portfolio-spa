@@ -1,4 +1,5 @@
 import { loadCSS, loadJSON } from "../../utils.js";
+import { loadProjects } from "../utils.js";
 
 export class FrontendPage extends HTMLElement {
   constructor() {
@@ -15,13 +16,12 @@ export class FrontendPage extends HTMLElement {
     });
   }
 
-  // when the component is attached to the DOM
   async connectedCallback() {
     const template = document.getElementById("page-template");
     const content = template.content.cloneNode(true);
     this.root.appendChild(content);
 
-    // Load profile data
+    // Load data
     const res = await loadJSON("./components/frontend/data.json");
     this.data = res;
 
@@ -31,14 +31,7 @@ export class FrontendPage extends HTMLElement {
   render() {
     if (!this.data) return;
 
-    const projectContainer = this.root.querySelector("#projects");
-    projectContainer.innerHTML = "";
-    
-    this.data.projects.forEach((project) => {
-      const item = document.createElement("project-item");
-      item.dataset.project = JSON.stringify({ ...project, icon: "monitor-smartphone" });
-      projectContainer.appendChild(item);
-    });
+    loadProjects(this.root, this.data.projects, "monitor-smartphone");
   }
 }
 customElements.define("frontend-page", FrontendPage);

@@ -1,4 +1,5 @@
 import { loadCSS, loadJSON } from "../../utils.js";
+import { loadProjects } from "../utils.js";
 
 export class BackendPage extends HTMLElement {
   constructor() {
@@ -30,14 +31,7 @@ export class BackendPage extends HTMLElement {
   render() {
     if (!this.data) return;
 
-    const projectContainer = this.root.querySelector("#projects");
-    projectContainer.innerHTML = "";
-
-    this.data.projects.forEach((project) => {
-      const item = document.createElement("project-item");
-      item.dataset.project = JSON.stringify({ ...project, icon: "database" });
-      projectContainer.appendChild(item);
-    });
+    loadProjects(this.root, this.data.projects, "database");
   }
 }
 customElements.define("backend-page", BackendPage);

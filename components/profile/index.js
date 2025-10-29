@@ -20,7 +20,7 @@ export default class ProfilePage extends HTMLElement {
     const content = template.content.cloneNode(true);
     this.root.appendChild(content);
 
-    // Load profile data
+    // Load data
     const res = await loadJSON("./components/profile/data.json");
     this.data = res.profile;
 
@@ -44,7 +44,7 @@ export default class ProfilePage extends HTMLElement {
       const experienceContainer = this.root.querySelector("#work_experience");
       if (experienceContainer) {
         experienceContainer.innerHTML = '';
-        this.data.work_experience.forEach((exp, index) => {
+        this.data.work_experience.forEach((exp) => {
           const expCard = document.createElement("div");
           expCard.className = "experience-card";
           expCard.innerHTML = `
