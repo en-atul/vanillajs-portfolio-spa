@@ -20,13 +20,12 @@ class Router {
       return Router.#instance;
     }
   
-    #init() {
+  #init() {
       window.addEventListener('popstate', (ev) => {
         const path = ev.state?.path || window.location.pathname;
-        console.log('popstate fired', path, ev.state);
-        this.navigate(path, ev.state, false);
+        this.navigate(path, ev.state || {}, false);
       });
-  
+
       const basePath = window.location.pathname || '/';
       history.replaceState({ path: basePath }, '', basePath);
       this.navigate(basePath, { path: basePath }, false);
@@ -41,7 +40,7 @@ class Router {
       this.navigate(path, state, true, true);
     }
   
-    navigate(path, state = {}, updateHistory = true, replace = false) {
+  navigate(path, state = {}, updateHistory = true, replace = false) {
       if (typeof path !== 'string' || !path.startsWith('/')) {
         throw new Error('Router: Invalid path.');
       }

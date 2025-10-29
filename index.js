@@ -15,8 +15,8 @@ anchors.forEach((anchor) => {
   });
 });
 
-// Render Initial Page
-routeToPage(window.location.pathname);
+// Render Initial Page using History API pathname
+routeToPage(window.location.pathname || '/');
 
 // Route Change Listener
 window.addEventListener("routechange", (ev) => {
