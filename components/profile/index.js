@@ -1,50 +1,30 @@
-import { loadCSS, loadJSON } from "../../utils.js";
+import HTMLPage from "../page.js";
 
-export default class ProfilePage extends HTMLElement {
+const basePath = "./components/profile";
+
+export default class ProfilePage extends HTMLPage {
   constructor() {
-    super();
-    this.root = this.attachShadow({ mode: "open" });
-    this.data = null;
-
-    const styles = document.createElement("style");
-    this.root.appendChild(styles);
-
-    // Inject CSS to the shadow DOM
-    loadCSS("./components/profile/style.css").then((css) => {
-      styles.textContent = css;
-    });
-  }
-
-  async connectedCallback() {
-    const template = document.getElementById("profile-template");
-    const content = template.content.cloneNode(true);
-    this.root.appendChild(content);
-
-    // Load data
-    const res = await loadJSON("./components/profile/data.json");
-    this.data = res.profile;
-
-    this.render();
+    super(basePath, "profile-template");
   }
 
   render() {
-    if (!this.data) return;
+    if (!this.data.profile) return;
 
     const img = document.createElement("img");
-    img.src = this.data.image;
+    img.src = this.data.profile.image;
     this.root.querySelector("#profile__image").appendChild(img);
 
-    this.root.querySelector("#profile__name").textContent = this.data.name;
+    this.root.querySelector("#profile__name").textContent = this.data.profile.name;
     this.root.querySelector("#profile__summary").textContent =
-      this.data.summary;
+      this.data.profile.summary;
     const basedInEl = this.root.querySelector("#profile__based_in");
-    basedInEl.innerHTML = '<i data-lucide="map-pin"></i> ' + this.data.based_in;
+    basedInEl.innerHTML = '<i data-lucide="map-pin"></i> ' + this.data.profile.based_in;
 
-    if (this.data.work_experience && this.data.work_experience.length > 0) {
+    if (this.data.profile.work_experience && this.data.profile.work_experience.length > 0) {
       const experienceContainer = this.root.querySelector("#work_experience");
       if (experienceContainer) {
         experienceContainer.innerHTML = '';
-        this.data.work_experience.forEach((exp) => {
+        this.data.profile.work_experience.forEach((exp) => {
           const expCard = document.createElement("div");
           expCard.className = "experience-card";
           expCard.innerHTML = `
