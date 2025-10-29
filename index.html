@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SPA v1</title>
+
+    <link rel="stylesheet" href="style.css" />
+    <script type="module" src="index.js" defer></script>
+  </head>
+
+  <body>
+    <header id="header">
+      <div></div>
+      <ul id="header__nav">
+        <li><a class="navlink" href="/frontend">Frontend</a></li>
+        <li><a class="navlink" href="/backend">Backend</a></li>
+        <li><a class="navlink" href="/fullstack">Fullstack</a></li>
+      </ul>
+      <div></div>
+    </header>
+    <main></main>
+    <template id="profile-template">
+      <div id="profile__image"></div>
+      <div id="profile__name"></div>
+      <div id="profile__summary"></div>
+      <div id="profile__based_in"></div>
+    </template>
+
+    <template id="project-item-template">
+      <article>
+        <h4 class="project__title"></h4>
+        <p class="project__description"></p>
+        <p class="project__stack"></p>
+        <div class="project__links"></div>
+      </article>
+    </template>
+
+    <template id="frontend-template">
+        <div id="projects"></div>
+    </template>
+
+    <footer>
+      <p>&copy; 2025 SPA v1. All rights reserved.</p>
+    </footer>
+  </body>
+</html>

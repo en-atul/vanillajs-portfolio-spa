@@ -1,0 +1,25 @@
+{
+  "projects": [
+    {
+      "title": "Social Media App",
+      "description": "Fullstack social media application with real-time chat, posts, and notifications.",
+      "technologies": [
+        "Next.js",
+        "Node.js",
+        "Express",
+        "MongoDB",
+        "Socket.io",
+        "TailwindCSS"
+      ],
+      "link": "https://socialapp.example.com",
+      "github": "https://github.com/johndoe/social-media-app"
+    },
+    {
+      "title": "Project Management Tool",
+      "description": "Tool for teams to track tasks, sprints, and generate reports.",
+      "technologies": ["React", "NestJS", "PostgreSQL", "GraphQL", "Docker"],
+      "link": "https://projecttool.example.com",
+      "github": "https://github.com/johndoe/project-management-tool"
+    }
+  ]
+}

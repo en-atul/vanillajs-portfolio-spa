@@ -1,0 +1,18 @@
+{
+  "projects": [
+    {
+      "title": "Portfolio Website",
+      "description": "Personal portfolio website showcasing projects, blogs, and resume.",
+      "technologies": ["React", "TypeScript", "TailwindCSS", "Vite"],
+      "link": "https://johndoe.com",
+      "github": "https://github.com/johndoe/portfolio"
+    },
+    {
+      "title": "E-commerce Frontend",
+      "description": "Interactive e-commerce UI with shopping cart and product catalog.",
+      "technologies": ["Vue", "Vuex", "HTML", "CSS", "Sass"],
+      "link": "https://shop.example.com",
+      "github": "https://github.com/johndoe/ecommerce-frontend"
+    }
+  ]
+}

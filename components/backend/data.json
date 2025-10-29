@@ -1,0 +1,16 @@
+{
+  "projects": [
+    {
+      "title": "REST API for E-commerce",
+      "description": "Backend API handling products, orders, and user authentication.",
+      "technologies": ["Node.js", "Express", "MongoDB", "JWT", "Redis"],
+      "github": "https://github.com/johndoe/ecommerce-backend"
+    },
+    {
+      "title": "Blog Platform Backend",
+      "description": "Backend for a multi-user blog platform with admin panel and content moderation.",
+      "technologies": ["Python", "Django", "PostgreSQL", "Celery", "Redis"],
+      "github": "https://github.com/johndoe/blog-backend"
+    }
+  ]
+}
