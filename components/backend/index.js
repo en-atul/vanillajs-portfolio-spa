@@ -3,7 +3,7 @@ import { loadProjects } from "../utils.js";
 
 const basePath = "./components/backend";
 
-export class BackendPage extends HTMLPage {
+export default class BackendPage extends HTMLPage {
   constructor() {
     super(basePath);
   }
@@ -14,4 +14,3 @@ export class BackendPage extends HTMLPage {
     loadProjects(this.root, this.data.projects, "database");
   }
 }
-customElements.define("backend-page", BackendPage);

@@ -1,41 +1,37 @@
 import Router from "./router.js";
-import { lucideInit, routeToPage } from "./utils.js";
-import "./components/index.js";
+import { lucideInit, routeToPage, highlightActiveLink } from "./utils.js";
+
+window.anchors = [];
 
 const router = new Router();
 
-const anchors = document.querySelectorAll("a.navlink");
+document.addEventListener("DOMContentLoaded", async function () {
+  // Render Initial Page
+  await routeToPage(window.location.pathname || "/");
 
-anchors.forEach((anchor) => {
-  anchor.addEventListener("click", (ev) => {
-    ev.preventDefault();
+  window.anchors = document.querySelectorAll("a.navlink");
 
+  highlightActiveLink();
+  lucideInit();
+});
+
+// Click Listener
+document.addEventListener("click", (ev) => {
+  ev.preventDefault();
+  if (ev.target.tagName === "A") {
     const path = ev.target.getAttribute("href");
     router.push(path);
-  });
+  }
 });
-
-// Render Initial Page using History API pathname
-routeToPage(window.location.pathname || "/");
 
 // Route Change Listener
-window.addEventListener("routechange", (ev) => {
+window.addEventListener("routechange", async (ev) => {
   const path = ev.detail.path;
-  routeToPage(path);
+  await routeToPage(path);
 
   // Reinitialize lucide
-  lucideInit()
+  lucideInit();
 
   // change active link color
-  anchors.forEach((anchor) => {
-    if (anchor.getAttribute("href") === path) {
-      anchor.classList.add("active");
-    } else {
-      anchor.classList.remove("active");
-    }
-  });
-});
-
-document.addEventListener("DOMContentLoaded", function () {
-  lucideInit();
+  highlightActiveLink(path);
 });

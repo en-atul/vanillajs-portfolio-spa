@@ -3,7 +3,7 @@ import { loadProjects } from "../utils.js";
 
 const basePath = "./components/frontend";
 
-export class FrontendPage extends HTMLPage {
+export default class FrontendPage extends HTMLPage {
   constructor() {
     super(basePath);
   }
@@ -14,4 +14,3 @@ export class FrontendPage extends HTMLPage {
     loadProjects(this.root, this.data.projects, "monitor-smartphone");
   }
 }
-customElements.define("frontend-page", FrontendPage);

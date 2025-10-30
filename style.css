@@ -144,12 +144,13 @@ header a {
   color: var(--muted);
   text-decoration: none;
 }
+
 header a:hover {
-  text-decoration: underline;
+  color: var(--secondary);
 }
 
 .active{
-  color: var(--primary);
+  color: var(--secondary);
 }
 
 #header__nav a { display: inline-flex; align-items: center; gap: 0.4rem; }

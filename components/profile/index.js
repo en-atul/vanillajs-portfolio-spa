@@ -44,4 +44,3 @@ export default class ProfilePage extends HTMLPage {
     }
   }
 }
-customElements.define("profile-page", ProfilePage);

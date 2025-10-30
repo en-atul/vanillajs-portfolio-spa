@@ -3,7 +3,7 @@ import { loadProjects } from "../utils.js";
 
 const basePath = "./components/fullstack";
 
-export class FullstackPage extends HTMLPage {
+export default class FullstackPage extends HTMLPage {
   constructor() {
     super(basePath);
   }
@@ -14,4 +14,3 @@ export class FullstackPage extends HTMLPage {
     loadProjects(this.root, this.data.projects, "layers");
   }
 }
-customElements.define("fullstack-page", FullstackPage);

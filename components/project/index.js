@@ -46,4 +46,3 @@ export default class ProjectItem extends HTMLElement {
   }
 }
 
-customElements.define("project-item", ProjectItem);
