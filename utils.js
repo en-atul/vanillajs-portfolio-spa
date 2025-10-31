@@ -131,31 +131,6 @@ function lucideInit() {
   });
 }
 
-// Debounce utility function
-function debounce(func, wait) {
-  let timeout;
-  return function executedFunction(...args) {
-    const later = () => {
-      clearTimeout(timeout);
-      func(...args);
-    };
-    clearTimeout(timeout);
-    timeout = setTimeout(later, wait);
-  };
-}
-
-// Throttle utility function for high-frequency events
-function throttle(func, limit) {
-  let inThrottle;
-  return function executedFunction(...args) {
-    if (!inThrottle) {
-      func.apply(this, args);
-      inThrottle = true;
-      setTimeout(() => (inThrottle = false), limit);
-    }
-  };
-}
-
 // Memory cleanup utility
 // Clear caches if they get too large
 function cleanup() {
@@ -186,7 +161,5 @@ export {
   routeToPage,
   lucideInit,
   highlightActiveLink,
-  debounce,
-  throttle,
   cleanup,
 };
